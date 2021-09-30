@@ -9,6 +9,11 @@ const like = document.createElement("span");
 const cont = document.createElement("span");
 let gustado = 0 ;
 
+const p = document.createElement("p");
+p.textContent =
+  "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius ut doloribus sequi aut officiis voluptatem quas magnam ipsum odit vel. Consectetur aliquam sit ipsum voluptatibus eum earum. Minima, ipsam id!";
+p.classList.add("moreInfo");
+
 
 
 image.src="https://picsum.photos/id/237/500/500";
@@ -30,20 +35,23 @@ document.body.appendChild(newDog);
 newDog.appendChild(image);
 newDog.appendChild(title);
 newDog.appendChild(parraf);
+newDog.appendChild(p);
 newDog.appendChild(like);
 like.appendChild(icon);
 like.appendChild(cont);
 newDog.appendChild(btn);
 
-const showMore = () =>
-  (document.querySelector(".moreInfo").style.display = "block");
 
 const pushlike = ()=>{ 
  gustado=gustado+1;
  cont.textContent=gustado;
  console.log(gustado);
 }
+const showMore = () =>
+  (document.querySelector(".moreInfo").classList.toggle("moreInfoNo"));
+  
 
 document.querySelector(".likes").addEventListener("click",pushlike);
+document.querySelector(".button").addEventListener("click", showMore);
 
 

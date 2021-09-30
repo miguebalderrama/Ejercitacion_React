@@ -12,7 +12,9 @@
   }
   
   .moreInfo {
-    display: none;
+visibility: hidden;  }
+  .moreInfoNo {
+    visibility: visible;
   }
   
   .button {
