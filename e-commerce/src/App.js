@@ -1,5 +1,8 @@
 import './App.css';
 import Dog from './components/Dog';
+import NavBar from './components/NavBar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   const dog = {
@@ -19,6 +22,7 @@ function App() {
   
   return(
   <div className="App">
+    <NavBar/>
     <h1>Hola Coders!</h1>
     <hr/>
    
@@ -28,6 +32,7 @@ function App() {
     <hr/>
     </>
     ))}
+
   </div>
   );
 }

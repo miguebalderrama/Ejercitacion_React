@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+.navbarme{
+    background-color:#ff3c3c;
+    color: white;
+}
+.nav-link{
+    font-family: 'Mulish', sans-serif;
+    color: white !important;
+    font-size: 14px;
+}
