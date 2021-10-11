@@ -35,10 +35,11 @@ function NavBar() {
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#link">
-             <CartWidget  tittleCart="Carrito" className="card-widget" />
+             
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
+        <CartWidget  tittleCart="Carrito" className="card-widget" />
       </Container>
     </Navbar>
   );
