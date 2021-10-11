@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+.parent-button1{
+  background-color:#f14e4e;
+}
+.parent-button2{
+  background-color:#4ef18f;
+}
+.parent-button3{
+  background-color:#9a4ef1;
+}
+.card-widget{
+  width: 25px;
+}
