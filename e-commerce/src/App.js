@@ -14,7 +14,7 @@ function App() {
   <div className="App">
     <NavBar/>  
     <hr/>
-    <ItemListContainer greeting="Hola gente !!"/>
+    <ItemListContainer className="stylegreeting"greeting="Hola gente !!"/>
     <h2>Hola {name}</h2>  
     <FunctionalComponent  hello={hello} setName={setName}/>
     <ButtonMe className="parent-button1" action={()=> handleClickButton("Pupi")} name={"Boton 1"}/>
