@@ -39,7 +39,7 @@ function NavBar() {
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
-        <CartWidget  tittleCart="Carrito" className="card-widget" />
+        <CartWidget classCount="cart-count" cartCount="3" tittleCart="Carrito" className="card-widget" />
       </Container>
     </Navbar>
   );

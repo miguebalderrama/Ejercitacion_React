@@ -47,7 +47,11 @@
 }
 .card-widget{
   width: 25px;
+  margin-right: -14px;
 }
 .stylegreeting{
   color: #0947c3;
+}
+.cart-count{
+  font-weight: bold;
 }
