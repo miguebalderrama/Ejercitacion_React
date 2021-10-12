@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Image, InputGroup, FormControl } from "react-bootstrap";
+import { OverlayTrigger, Tooltip} from "react-bootstrap";
 import Logo from "./tiendamia.png";
 
 import "./NavBar.css";
@@ -24,7 +25,20 @@ function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto"></Nav>
           <Nav>
-            <Nav.Link href="#deets">Registrate</Nav.Link>
+            <Nav.Link href="#deets">
+            <OverlayTrigger
+      key={'bottom'}
+      placement={'bottom'}
+     delay={'250'}
+      overlay={
+        <Tooltip id={`tooltip-bottom`}>
+          Widget de favoritos.<br/> Aca va un prop
+        </Tooltip>
+      }
+    >
+      <p variant="secondary">Favoritos</p>
+    </OverlayTrigger>
+            </Nav.Link>
             <NavDropdown title="Mi cuenta" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Tecnologia</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Ropa</NavDropdown.Item>
