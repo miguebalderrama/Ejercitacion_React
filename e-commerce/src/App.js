@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import FunctionalComponent  from './components/functional-component/FunctionalComponent';
 import ButtonMe from './components/buttonMe/ButtonMe';
 import ItemListContainer from './components/item-list-container/ItemListContainer';
+import ItemCount from './components/item-count/ItemCount';
 
 function App() {
   const [name, setName] = useState("");
@@ -15,6 +16,7 @@ function App() {
     <NavBar/>  
     <hr/>
     <ItemListContainer className="stylegreeting"greeting="Hola gente !!"/>
+    <ItemCount />
     <h2>Hola {name}</h2>  
     <FunctionalComponent  hello={hello} setName={setName}/>
     <ButtonMe className="parent-button1" action={()=> handleClickButton("Pupi")} name={"Boton 1"}/>
