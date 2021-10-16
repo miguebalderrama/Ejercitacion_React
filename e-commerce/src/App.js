@@ -16,7 +16,9 @@ function App() {
     <NavBar/>  
     <hr/>
     <ItemListContainer className="stylegreeting"greeting="Hola gente !!"/>
-    <ItemCount />
+    <ItemCount initial="8" stock="14" onAdd={()=>console.log("Compra realizada")}/>
+    <br/>
+    <br/>
     <h2>Hola {name}</h2>  
     <FunctionalComponent  hello={hello} setName={setName}/>
     <ButtonMe className="parent-button1" action={()=> handleClickButton("Pupi")} name={"Boton 1"}/>
