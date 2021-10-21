@@ -8,8 +8,7 @@ function Item({id,title,price, pictureUrl}) {
   <Card.Body>
     <Card.Title>{title}</Card.Title>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content. Precio {price}
+      Precio {price}
     </Card.Text>
     <Button variant="primary">Ver detalle</Button>
   </Card.Body>

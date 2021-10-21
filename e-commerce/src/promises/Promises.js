@@ -2,17 +2,15 @@ import React, { useState } from 'react';
 import ItemList from '../components/item-list/ItemList';
 
 
-const Promises = ({products}) => {
-  const [isSucces,setIsSucces]= useState(false);
+const Promises = ({products}) => { 
   const [isLoading, setIsLoading] = useState(true);
-  const [isFinished, setIsFinished] = useState(false);
   const [currentProducts, setCurrentProducts] = useState([]);
 
   const productsResponse = new Promise((resolve, reject) => {
       setTimeout(()=>{
      resolve(products);
     //reject('Hubo un problema en la respuesta');
-      }, 300);
+      }, 3000);
     
   });
  /** task.then(
@@ -35,8 +33,7 @@ setCurrentProducts(results);
 .catch((error)=>{
     console.log(`Error in progress ${error}`)   
 })
-.finally(()=>{
-    setIsFinished(true);
+.finally(()=>{   
     setIsLoading(false);
 });
     
@@ -44,6 +41,7 @@ setCurrentProducts(results);
   return (  
      
       <div>
+        {isLoading&& <h3>is loading...</h3>}
          <ItemList currentProducts={currentProducts}/> 
       </div>    
     
