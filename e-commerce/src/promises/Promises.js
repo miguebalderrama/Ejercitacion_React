@@ -1,50 +1,22 @@
-import React, { useState } from 'react';
-import ItemList from '../components/item-list/ItemList';
+import React, { useState } from "react";
+import  { useEffect } from "react";
+import ItemList from "../components/item-list/ItemList";
+import { promises } from "../helpers/promises";
 
-
-const Promises = ({products}) => { 
+const Promises = ({ products }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [currentProducts, setCurrentProducts] = useState([]);
+  useEffect(() => {
+   if(products){
+     promises(products , setCurrentProducts, setIsLoading);
+   }
+  }, [products])
 
-  const productsResponse = new Promise((resolve, reject) => {
-      setTimeout(()=>{
-     resolve(products);
-    //reject('Hubo un problema en la respuesta');
-      }, 3000);
-    
-  });
- /** task.then(
-    (result) => {
-      console.log(`Result is true ${result}`);
-      setIsSucces(true);
-    })
-    .catch((error)=>{
-        console.log(`Error in progress ${error}`)
-    })
-    .finally(()=>{
-        setIsFinished(true);
-        setIsLoading(false);
-    });
-*/ 
-productsResponse.then((results)=>{
-console.log(results);
-setCurrentProducts(results);
-})
-.catch((error)=>{
-    console.log(`Error in progress ${error}`)   
-})
-.finally(()=>{   
-    setIsLoading(false);
-});
-    
-   
-  return (  
-     
-      <div>
-        {isLoading&& <h3>is loading...</h3>}
-         <ItemList currentProducts={currentProducts}/> 
-      </div>    
-    
+  return (
+    <div>
+      {isLoading && <h3>is loading...</h3>}
+      <ItemList currentProducts={currentProducts} />
+    </div>
   );
 };
 
