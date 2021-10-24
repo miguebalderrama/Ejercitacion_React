@@ -6,7 +6,7 @@ import Promises from '../../promises/Promises'
 function ItemListContainer({className,greeting}) {
     return (
         <Container className={className}>
-        <h1>Saludo: {greeting}</h1>
+        <h3>Saludo: {greeting}</h3>
         <Promises products={products}/>
         </Container>
     )

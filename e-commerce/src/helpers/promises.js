@@ -4,7 +4,7 @@ export const promises = (products , setCurrentProducts, setIsLoading)=> {
     setTimeout(() => {
       resolve(products);
       //reject('Hubo un problema en la respuesta');
-    }, 3000);
+    }, 2000);
   });
   productsResponse.then((results) => {
       console.log(results);
