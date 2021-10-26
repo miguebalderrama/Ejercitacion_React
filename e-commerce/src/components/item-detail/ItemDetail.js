@@ -4,7 +4,7 @@ import { faMinus,faPlus } from '@fortawesome/free-solid-svg-icons'
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
 
 function ItemDetail({id,title, price, pictureUrl,stock}) {
-    let initial=7;
+    let initial=0;
     const [count, setCount] = useState(Number(initial));
 
   const increment = (contador) =>{

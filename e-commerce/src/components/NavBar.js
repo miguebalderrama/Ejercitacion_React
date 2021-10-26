@@ -3,6 +3,7 @@ import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Image, InputGroup, FormControl } from "react-bootstrap";
 import { OverlayTrigger, Tooltip} from "react-bootstrap";
 import Logo from "./tiendamia.png";
+import {Link} from "react-router-dom";
 
 import "./NavBar.css";
 import CartWidget from "./cartwidget/CartWidget";
@@ -12,7 +13,9 @@ function NavBar() {
     <Navbar className="navbarme" expand="lg">
       <Container>
         <Navbar.Brand href="#home">
+          <Link to="/">
           <Image src={Logo} rounded />
+          </Link>
         </Navbar.Brand>
         <InputGroup size="sm" className="formMain mb-3">
           <FormControl
@@ -39,21 +42,29 @@ function NavBar() {
       <p variant="secondary">Favoritos</p>
     </OverlayTrigger>
             </Nav.Link>
-            <NavDropdown title="Mi cuenta" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Tecnologia</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Ropa</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Muebles</NavDropdown.Item>
+            <NavDropdown title="Categorias" id="basic-nav-dropdown">
+              <NavDropdown.Item >
+               <Link to="/category/deportivas"> Deportivas</Link>
+                </NavDropdown.Item>
+              <NavDropdown.Item >
+              <Link to="/category/casual">Casual</Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item >
+              <Link to="/category/trekking">Trekking</Link>
+              </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Dia de la madre
+              <NavDropdown.Item >
+              <Link to="/category/masvendidas">Mas vendidas</Link>
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#link">
              
             </Nav.Link>
           </Nav>
-        </Navbar.Collapse>
+        </Navbar.Collapse> 
+        <Link to="/cart">
         <CartWidget classCount="cart-count" cartCount="3" tittleCart="Carrito" className="card-widget" />
+        </Link>      
       </Container>
     </Navbar>
   );

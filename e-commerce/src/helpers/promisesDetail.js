@@ -1,15 +1,15 @@
-export const promises = (products , setCurrentProducts, setIsLoading)=> {
+export const promisesDetail = (products, setSelectProduct, setIsLoading)=> {
     
   const productsResponse = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(products);
       console.log(products)
       //reject('Hubo un problema en la respuesta');
-    }, 2000);
+    }, 1000);
   });
   productsResponse.then((results) => {
       
-      setCurrentProducts(results);
+    setSelectProduct(results);
       console.log(results);
     })
     .catch((error) => {

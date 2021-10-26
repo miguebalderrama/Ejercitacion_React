@@ -9,7 +9,7 @@ function CartWidget({classCount,cartCount,className,tittleCart}) {
       src="https://tiendamia.com/skin/frontend/traigo/traigo/images/svg/carrito_header.svg"
       rounded
     />
-    <p className={classCount}>{cartCount}</p>
+    <span className={classCount}>{cartCount}</span>
     </>
   );
 }
