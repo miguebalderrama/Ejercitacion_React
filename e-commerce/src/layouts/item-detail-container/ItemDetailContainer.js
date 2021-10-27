@@ -25,8 +25,8 @@ function ItemDetailContainer() {
       <h1>itemDetailContainer</h1>
       {isLoading && <h3>is loading...</h3>}
 
-      <ItemDetail  {...selectProduct.find((results) => results.id === numberId)}
-      />
+      {(!isLoading) && <ItemDetail  {...selectProduct.find((results) => results.id === numberId)}
+      />}
       {console.log(selectProduct.find((results) => results.id === numberId))}
     </div>
   );

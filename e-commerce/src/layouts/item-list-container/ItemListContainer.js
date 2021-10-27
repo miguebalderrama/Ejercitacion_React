@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { Container } from 'react-bootstrap'
 import { products } from '../../data/data'
 import Promises from '../../promises/Promises'
-
+import "./itemListContainer.css"
 
 function ItemListContainer({className}) {
 
