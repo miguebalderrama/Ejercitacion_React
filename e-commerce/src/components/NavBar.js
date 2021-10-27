@@ -54,7 +54,7 @@ function NavBar() {
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item >
-              <Link to="/category/masvendidas">Mas vendidas</Link>
+              <Link to="/">Todas las categorias</Link>
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#link">

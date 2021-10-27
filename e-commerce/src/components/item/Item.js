@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 function Item({pictureUrl,title,price}) {
     return (
@@ -10,7 +10,7 @@ function Item({pictureUrl,title,price}) {
     <Card.Text>
       Precio {price}
     </Card.Text>
-    {/*<Button variant="primary">Ver detalle</Button>*/}
+    
   </Card.Body>
   </Card>
        

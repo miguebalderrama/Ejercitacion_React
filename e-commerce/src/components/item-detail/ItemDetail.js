@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMinus,faPlus } from '@fortawesome/free-solid-svg-icons'
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
 
-function ItemDetail({id,title, price, pictureUrl,stock}) {
+function ItemDetail({id,title, price, pictureUrl,stock,description}) {
     let initial=0;
     const [count, setCount] = useState(Number(initial));
 
@@ -31,8 +31,8 @@ function ItemDetail({id,title, price, pictureUrl,stock}) {
         <Card style={{ width: "18rem", margin: "auto" }}>
           <Card.Img  style={{ padding: "10px"}} variant="top" src={pictureUrl} />
           <Card.Body>
-            <Card.Title>{price}</Card.Title>
-            <Card.Text>{title}</Card.Text>
+            <Card.Title>{price}<br></br>{title}</Card.Title>
+            <Card.Text>{description}</Card.Text>
             <Container style={{ margin: "0 0 10px 0", border: "solid 1px grey" }}>
               <Row>
                 <Col style={{ color: "#3383FF", cursor: "pointer" }} onClick={() => decrement(count)}>
