@@ -8,6 +8,7 @@ import { promisesDetail } from "../../helpers/promisesDetail";
 function ItemDetailContainer() {
   const [isLoading, setIsLoading] = useState(true);
   const [selectProduct, setSelectProduct] = useState([]);
+  const [quantity, setQuantity] = useState(0);
 
   const { itemId } = useParams();
   let numberId= Number(itemId);
@@ -25,7 +26,7 @@ function ItemDetailContainer() {
       <h1>itemDetailContainer</h1>
       {isLoading && <h3>is loading...</h3>}
 
-      {(!isLoading) && <ItemDetail  {...selectProduct.find((results) => results.id === numberId)}
+      {(!isLoading) && <ItemDetail quantity={quantity} setQuantity={setQuantity} {...selectProduct.find((results) => results.id === numberId)}
       />}
       {console.log(selectProduct.find((results) => results.id === numberId))}
     </div>
