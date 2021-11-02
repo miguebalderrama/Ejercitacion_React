@@ -23,7 +23,7 @@ function ItemDetailContainer() {
 
   return (
     <div>
-      <h1>itemDetailContainer</h1>
+      
       {isLoading && <h3>is loading...</h3>}
 
       {(!isLoading) && <ItemDetail quantity={quantity} setQuantity={setQuantity} {...selectProduct.find((results) => results.id === numberId)}

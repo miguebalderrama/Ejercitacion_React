@@ -1,12 +1,14 @@
-import React from "react";
+import React,{ useState } from "react";
 import { Card, Button, Container} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ItemCount from "../item-count/ItemCount";
 
 function ItemDetail({id,title, price, pictureUrl,stock,description,quantity,setQuantity}) {
-    
+   const [stateBuy, setStateBuy] = useState(false);    //state for buy button     
   const buy = ()=>{
-    if(quantity!==0) console.log("Compramos!!!");  } 
+    if(quantity!==0){
+      setStateBuy(true);
+    } console.log("Compramos!!!");  } 
 
  
     return (
@@ -17,10 +19,13 @@ function ItemDetail({id,title, price, pictureUrl,stock,description,quantity,setQ
           <Card.Body>
             <Card.Title>{price}<br></br>{title}</Card.Title>
             <Card.Text>{description}</Card.Text>
-            <ItemCount quantity={quantity} setQuantity={setQuantity} stock={stock}/>
+            {stateBuy === false &&(<ItemCount quantity={quantity} setQuantity={setQuantity} stock={stock}/>)}
             <div className="d-grid gap-2">  
-            {quantity > 0 && (<Link to="/cart">            
-              <Button variant="outline-primary"onClick={buy}>Agregar al carrito</Button>
+            {quantity > 0 && stateBuy === false && (           
+              <Button variant="outline-primary"onClick={buy}>Agregar al carrito</Button>             
+           )}
+             {stateBuy === true &&(<Link to="/cart"> 
+            <Button variant="outline-primary">Terminar mi compra</Button>
             </Link>)}
             
             </div>

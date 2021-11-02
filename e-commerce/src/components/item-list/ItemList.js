@@ -7,7 +7,7 @@ function ItemList({currentProducts}) {
     return (
         <div className="item-list">
           {currentProducts.map((results)=>(
-             <Link to={`item/${results.id}`}>               
+             <Link to={`/item/${results.id}`}>               
               <Item {...results}/>
               </Link>               
           )

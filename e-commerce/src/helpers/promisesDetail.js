@@ -5,7 +5,7 @@ export const promisesDetail = (products, setSelectProduct, setIsLoading)=> {
       resolve(products);
       console.log(products)
       //reject('Hubo un problema en la respuesta');
-    }, 1000);
+    }, 50);
   });
   productsResponse.then((results) => {
       
