@@ -1,14 +1,20 @@
-import React,{ useState } from "react";
+import React,{ useState,useContext } from "react";
 import { Card, Button, Container} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ItemCount from "../item-count/ItemCount";
+import { CartContext } from "../../context/CartContext";
 
 function ItemDetail({id,title, price, pictureUrl,stock,description,quantity,setQuantity}) {
-   const [stateBuy, setStateBuy] = useState(false);    //state for buy button     
-  const buy = ()=>{
+   const [stateBuy, setStateBuy] = useState(false);    //state for buy button 
+   const {addItem} = useContext(CartContext);  
+
+  const handleAddItem = ()=>{
     if(quantity!==0){
       setStateBuy(true);
-    } console.log("Compramos!!!");  } 
+    } 
+    console.log("Compramos!!!"); 
+    
+   } 
 
  
     return (
@@ -22,7 +28,7 @@ function ItemDetail({id,title, price, pictureUrl,stock,description,quantity,setQ
             {stateBuy === false &&(<ItemCount quantity={quantity} setQuantity={setQuantity} stock={stock}/>)}
             <div className="d-grid gap-2">  
             {quantity > 0 && stateBuy === false && (           
-              <Button variant="outline-primary"onClick={buy}>Agregar al carrito</Button>             
+              <Button variant="outline-primary"onClick={handleAddItem}>Agregar al carrito</Button>             
            )}
              {stateBuy === true &&(<Link to="/cart"> 
             <Button variant="outline-primary">Terminar mi compra</Button>

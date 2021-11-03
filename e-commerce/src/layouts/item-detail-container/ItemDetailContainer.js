@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../../components/item-detail/ItemDetail";
@@ -9,6 +9,7 @@ function ItemDetailContainer() {
   const [isLoading, setIsLoading] = useState(true);
   const [selectProduct, setSelectProduct] = useState([]);
   const [quantity, setQuantity] = useState(0);
+  
 
   const { itemId } = useParams();
   let numberId= Number(itemId);
