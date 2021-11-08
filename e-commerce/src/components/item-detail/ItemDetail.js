@@ -27,8 +27,9 @@ function ItemDetail({
         pictureUrl,
         stock,
         description,
+        quantity,
       };
-      addItem(item, quantity);
+      addItem(item);
     }
 
     console.log("Compramos!!!");

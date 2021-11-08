@@ -1,6 +1,8 @@
 import React from "react";
 import { Image} from "react-bootstrap";
 
+
+
 function CartWidget({classCount,cartCount,className,tittleCart}) {
   return (
       <>
