@@ -60,9 +60,14 @@ function ItemDetail({
               </Button>
             )}
             {stateBuy === true && (
+              <>
               <Link to="/cart">
                 <Button variant="outline-primary">Terminar mi compra</Button>
               </Link>
+              <Link to="/"> <Button variant="outline-primary">
+              Seguir comprando
+            </Button></Link>
+              </>
             )}
           </div>
         </Card.Body>
