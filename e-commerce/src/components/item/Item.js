@@ -9,7 +9,7 @@ function Item({pictureUrl,title,price}) {
   <Card.Body>
     <Card.Title className="texto">{title}</Card.Title>
     <Card.Text className="texto">
-      Precio {price}
+      Precio ${price}
     </Card.Text>
     
   </Card.Body>

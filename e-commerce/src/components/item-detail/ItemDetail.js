@@ -41,7 +41,7 @@ function ItemDetail({
         <Card.Img style={{ padding: "10px" }} variant="top" src={pictureUrl} />
         <Card.Body>
           <Card.Title>
-            {price}
+            ${price}
             <br></br>
             {title}
           </Card.Title>
