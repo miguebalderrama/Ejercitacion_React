@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../../components/item-detail/ItemDetail";
-import { products } from "../../data/data";
-import { promisesDetail } from "../../helpers/promisesDetail";
+
 import { getFirestore } from "../../firebase";
 
 function ItemDetailContainer() {
@@ -52,3 +51,4 @@ itemCollection.get().then(querySnapshot =>{
 }
 
 export default ItemDetailContainer;
+
