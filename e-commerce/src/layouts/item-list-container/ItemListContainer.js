@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Container } from 'react-bootstrap'
-//import { products } from '../../data/data'
-import Promises from '../../promises/Promises'
 import ItemList from "../../components/item-list/ItemList";
 import "./itemListContainer.css"
 import { getFirestore } from "../../firebase";
