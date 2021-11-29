@@ -7,11 +7,13 @@ import {Link} from "react-router-dom";
 
 import "./NavBar.css";
 import CartWidget from "./cartwidget/CartWidget";
+import { faHeart,faStream } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function NavBar() {
   return (
     <Navbar className="navbarme" expand="lg">
-      <Container>
+      <Container> 
         <Navbar.Brand href="#home">
           <Link to="/">
           <Image src={Logo} rounded />
@@ -28,6 +30,7 @@ function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto"></Nav>
           <Nav>
+
             <Nav.Link href="#deets">
             <OverlayTrigger
       key={'bottom'}
@@ -38,10 +41,13 @@ function NavBar() {
           Widget de favoritos.<br/> Aca va un prop
         </Tooltip>
       }
-    >
-      <p variant="secondary">Favoritos</p>
+    > 
+      <p variant="secondary"><FontAwesomeIcon style={{marginRight:"6px"}} icon={faHeart} /> 
+ Favoritos</p>
     </OverlayTrigger>
             </Nav.Link>
+            <FontAwesomeIcon style={{margin:"10px -2px 0 10px"}} icon={faStream} />
+
             <NavDropdown title="Categorias" id="basic-nav-dropdown">
               <NavDropdown.Item >
                <Link to="/category/deportivas"> Deportivas</Link>
