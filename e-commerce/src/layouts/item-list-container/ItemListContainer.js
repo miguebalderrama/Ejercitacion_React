@@ -5,6 +5,8 @@ import { Container } from 'react-bootstrap'
 import ItemList from "../../components/item-list/ItemList";
 import "./itemListContainer.css"
 import { getFirestore } from "../../firebase";
+import Banner from "../../components/banner/Banner";
+
 
 function ItemListContainer({className}) {
 
@@ -45,19 +47,12 @@ itemCollection.get().then(querySnapshot =>{
       console.log({products})}
     }, [categoryId, products]);
     return (
+      <div>
+         <Banner/>
         <Container className={className}>        
-        {/* <Promises products={selectFilter}/> */}
         <ItemList products={selectFilter} isLoading={isLoading} loading={loading}/>
-        {/*<ul>
-          {products.map(({id, title, pictureUrl}) => (
-            <li key={id}>
-              <h3>{title}</h3>
-              <img src={pictureUrl} alt=""/>
-            </li>))}
-        </ul>*/}
-        
-       
         </Container>
+        </div>
     )
     }
 

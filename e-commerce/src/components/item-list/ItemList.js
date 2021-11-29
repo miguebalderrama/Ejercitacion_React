@@ -6,15 +6,7 @@ import "./ItemList.css";
 function ItemList({products}) {
     console.log({products});
     return (
-        <div className="item-list">
-           {/* <ul>
-          {products.map(({id, title, pictureUrl}) => (
-            <li key={id}>
-              <h3>{title}</h3>
-              <img src={pictureUrl} alt=""/>
-            </li>))}
-        </ul>
-        */}
+        <div className="item-list">         
           {products.map(({id, title, pictureUrl,price})=>(
              <Link to={`/item/${id}`}>
               <Item price={price} title={title} url={pictureUrl}/>

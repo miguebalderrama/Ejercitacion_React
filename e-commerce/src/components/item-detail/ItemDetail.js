@@ -3,6 +3,8 @@ import { Card, Button, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ItemCount from "../item-count/ItemCount";
 import { CartContext } from "../../context/CartContext";
+import NumberFormat from 'react-number-format';
+
 
 function ItemDetail({
   id,
@@ -36,18 +38,23 @@ function ItemDetail({
   };
 
   return (
-    <Container>
-      <Card style={{ width: "18rem", margin: "auto" }}>
-        <Card.Img style={{ padding: "10px" }} variant="top" src={pictureUrl} />
+    <Container  style={{ display: 'flex', margin:"auto"}} >
+      <div>
+      <Card style={{ width: '25rem', height: '500px', marginTop:'20px' }}>
+        <Card.Img  style={{ paddingTop: '100px'}} src={pictureUrl} />
+        </Card>
+      </div>
+      <div>
+      <Card style={{ width: "18rem", marginTop: "20px",height: '500px',textAlign:'left' }}>
         <Card.Body>
-          <Card.Title>
-            ${price}
-            <br></br>
-            {title}
+          <Card.Title style={{ fontSize: "2rem"}}>
+          {title}              
           </Card.Title>
+          <Card.Text style={{ fontSize: "1.4rem", color:"grey", marginTop:"15px"}} > <NumberFormat value={price} displayType={'text'} thousandSeparator={true} prefix={'$'} />
+          </Card.Text>
           <Card.Text>{description}</Card.Text>
           {stateBuy === false && (
-            <ItemCount
+            <ItemCount 
               quantity={quantity}
               setQuantity={setQuantity}
               stock={stock}
@@ -55,16 +62,16 @@ function ItemDetail({
           )}
           <div className="d-grid gap-2">
             {quantity > 0 && stateBuy === false && (
-              <Button variant="outline-primary" onClick={handleAddItem}>
+              <Button variant="primary" onClick={handleAddItem}>
                 Agregar al carrito
               </Button>
             )}
             {stateBuy === true && (
               <>
               <Link to="/cart">
-                <Button variant="outline-primary">Ir al carrito</Button>
+                <Button style={{ marginTop: "100px", width:"100%"}} variant="primary" fluid>Ir al carrito</Button>
               </Link>
-              <Link to="/"> <Button variant="outline-primary">
+              <Link to="/"> <Button style={{width:"100%"}} variant="primary" fluid>
               Seguir comprando
             </Button></Link>
               </>
@@ -72,6 +79,7 @@ function ItemDetail({
           </div>
         </Card.Body>
       </Card>
+      </div>
     </Container>
   );
 }

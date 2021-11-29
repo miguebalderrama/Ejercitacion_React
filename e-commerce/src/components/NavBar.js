@@ -66,6 +66,7 @@ function NavBar() {
         <CartWidget classCount="cart-count" cartCount="3" tittleCart="Carrito" className="card-widget" />
         </Link>      
       </Container>
+
     </Navbar>
   );
 }

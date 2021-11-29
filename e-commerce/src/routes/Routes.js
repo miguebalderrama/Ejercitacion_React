@@ -11,7 +11,7 @@ import CartForm from '../components/cartform/CartForm.js';
 const Routes =() =>{
     return (
         <BrowserRouter>
-        <Navbar/>
+        <Navbar/>        
         <Switch>
             <Route exact path="/">
             <ItemListContainer className="stylegreeting"/>

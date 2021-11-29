@@ -23,7 +23,7 @@ function ItemCount({quantity,setQuantity,stock}) {
   }
   
   return (
-    <Container style={{ margin: "0 0 10px 0", border: "solid 1px grey" }}>
+    <Container style={{ margin: "100px 0 10px 0", border: "solid 1px grey",textAlign:'center' }}>
               <Row>
                 <Col style={{ color: "#3383FF", cursor: "pointer" }} onClick={() => decrement(contador)}>
                   <FontAwesomeIcon icon={faMinus} />
