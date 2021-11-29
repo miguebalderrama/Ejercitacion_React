@@ -4,7 +4,7 @@ import "./item.css";
 
 function Item({url,title,price}) {
     return (
-  <Card style={{ width: '18rem' ,heigth: 300, margin:'0.5rem',textdecoration:"none" }}>
+  <Card  className="itemZoom" style={{ width: '18rem' ,heigth: 300, margin:'0.5rem',textdecoration:"none" }}>
   <Card.Img variant="top" src={url} />
   <Card.Body>
     <Card.Title className="texto">{title}</Card.Title>
