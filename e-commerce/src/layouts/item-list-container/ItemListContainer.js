@@ -35,18 +35,19 @@ itemCollection.get().then(querySnapshot =>{
     const  {categoryId}  = useParams();
     useEffect(() => {      
       if (categoryId) {        
-        console.log("recibi parametros de URL");        
+        console.log("recibi parametros de URL");   
+        console.log({categoryId});     
         setSelectFilter( products.filter(results =>  results.category === categoryId))
       }
       else {
       console.log("Ruta vacia!");      
       setSelectFilter(products)
       console.log({products})}
-    }, [categoryId]);
+    }, [categoryId, products]);
     return (
         <Container className={className}>        
         {/* <Promises products={selectFilter}/> */}
-        <ItemList products={products} isLoading={isLoading} loading={loading}/>
+        <ItemList products={selectFilter} isLoading={isLoading} loading={loading}/>
         {/*<ul>
           {products.map(({id, title, pictureUrl}) => (
             <li key={id}>

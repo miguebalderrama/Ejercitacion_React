@@ -18,7 +18,7 @@ export const CartProvider = ({defaultValue=[],children})=>{
         setItems(findItem);     
     }
 
-    const clear=()=> setItems([defaultValue]);
+    const clear=()=> setItems([]);
     const isInCart=(itemId)=>{
         if(items.find((item)=>item.id===itemId)){
             return true;

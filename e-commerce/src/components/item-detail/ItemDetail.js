@@ -62,7 +62,7 @@ function ItemDetail({
             {stateBuy === true && (
               <>
               <Link to="/cart">
-                <Button variant="outline-primary">Terminar mi compra</Button>
+                <Button variant="outline-primary">Ir al carrito</Button>
               </Link>
               <Link to="/"> <Button variant="outline-primary">
               Seguir comprando

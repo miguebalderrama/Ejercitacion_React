@@ -5,6 +5,7 @@ import ItemListContainer from "../layouts/item-list-container/ItemListContainer"
 import ItemDetailContainer from "../layouts/item-detail-container/ItemDetailContainer";
 import NotFound from '../layouts/not-found/NotFound.js';
 import CartContainer from '../layouts/cart-container/CartContainer.js';
+import CartForm from '../components/cartform/CartForm.js';
 
 
 const Routes =() =>{
@@ -24,9 +25,13 @@ const Routes =() =>{
             <Route path="/cart">
             <CartContainer/>
             </Route>
+            <Route path="/cartForm">
+            <CartForm/>
+            </Route>
             <Route path="*">
             <NotFound/>
             </Route>
+            
             
         </Switch>
         </BrowserRouter>
